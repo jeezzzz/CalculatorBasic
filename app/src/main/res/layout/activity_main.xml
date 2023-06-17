@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#151414"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexend"
+            android:text="Calculator"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textSize="40sp"></TextView>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/input_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text=""
+        android:layout_marginEnd="10dp"
+        android:textSize="50sp"
+        android:fontFamily="@font/lexend"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/output_txt"
+        app:layout_constraintEnd_toEndOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/output_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text=""
+        android:layout_marginEnd="10dp"
+        android:textSize="90sp"
+        android:fontFamily="@font/lexend"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/keypad"
+        app:layout_constraintEnd_toEndOf="parent"></TextView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/keypad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0C0C0C"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ExtraText">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_clear"
+                android:scaleType="fitXY"
+                style="?android:borderlessButtonStyle"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@string/todo"
+                android:background="@drawable/btn_ac"></ImageButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_openbracket"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:background="@drawable/btn_openbracket"></androidx.appcompat.widget.AppCompatButton>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_closebracket"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/bnt_closebracket"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/btn_div"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_div"></ImageView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/btn_7"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_7"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_8"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_8"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_9"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_9"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/btn_x"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_x"></ImageView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/btn_4"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_4"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_5"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_5"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_6"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_6"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/btn_minus"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_minus"></ImageView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_1"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_1"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_2"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_2"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/btn_3"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_3"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_plus"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_plus"></ImageView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:visibility="invisible"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_c"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_0"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_0"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/btn_dot"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_dot"></ImageView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_equal"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn_equals"></ImageView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
